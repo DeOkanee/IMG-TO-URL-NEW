@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to URL Converter</title>
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/imgtourl-c16ed.appspot.com/o/images%2FICON.png?alt=media&token=fcf91e33-59e2-4083-93b2-fb9410f0fba6" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>IMAGE to URL Converter</h1>
+  </header>
+    <section class="container">
+        <div class="page">
+          <h1>Silahkan Masukkan File</h1>
+            <input type="file" id="fileInput" accept="image/*" />
+            <button id="convertButton" onclick="convertToURL()">
+              Convert to URL
+            </button>
+            <div id="result">
+              <p id="urlResult"></p>
+              <button id="copyButton" onclick="copyURL()">Copy URL</button>
+              <img id="preview" src="" alt="Preview" />
+            </div>
+          </div>
+          <div class="instructions">
+              <h3>How to Use the Image to URL Converter:</h3>
+              <ol>
+                  <li>Select an image file by clicking the "Choose File" button.</li>
+                  <li>After selecting an image, click the "Convert to URL" button to upload and convert your image.</li>
+                  <li>Once the conversion is complete, the URL of your image will be displayed along with a preview of the image.</li>
+                  <li>To copy the URL to your clipboard, click the "Copy URL" button. The button will change to "Tercopy!" to confirm the URL has been copied.</li>
+              </ol>
+              <p>Note: Make sure to select an image file before clicking the "Convert to URL" button.</p>
+          </div>
+    </section>
+    
+    <footer class="footer">
+        <p>© 2024 Debotz. All rights reserved.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="sc/script.js"></script>
+    <script src="sc/copy.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #2980b9; /* Warna latar belakang header */
+    padding: 10px;
+    text-align: center;
+    color: white; /* Warna teks */
+    border-bottom: 4px solid #27ae60; /* Garis bawah header */
+    position: sticky; /* Menjadikan header sticky */
+    top: 0; /* Menetapkan jarak atas */
+    z-index: 1000; /* Menetapkan z-index untuk mengatasi elemen lainnya */
+}
+
+header h1 {
+    font-size: 30px; /* Ukuran font untuk judul utama */
+    margin: 0; /* Menghilangkan margin */
+}
+
+
+.container{
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.page {
+    background-color: #3e9edf;
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.342);
+}
+
+.page h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0; /* Menghapus margin bawah pada h1 */
+}
+
+
+
+.page input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px dashed #bdc3c7;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page input[type="file"]:hover {
+    background-color: #e0e0e0;
+}
+
+.page button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #34e076;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.page button:hover {
+    background-color: #78e62f;
+    transform: scale(1.05);
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+#result {
+    text-align: center;
+    margin-top: 30px;
+    display: none; /* Tersembunyi secara default */
+}
+
+#urlResult {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Menyediakan pemutusan kata jika URL terlalu panjang */
+    max-width: 100%; /* Membuat lebar maksimal 100% */
+}
+
+#preview {
+    max-width: 60%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#preview:hover {
+    transform: scale(1.02);
+}
+
+#copyButton {
+    background-color: #27ae60;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Tersembunyi secara default */
+}
+
+#copyButton:hover {
+    background-color: #2ecc71;
+}
+.instructions {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.instructions h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions ol li {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.instructions p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 400;
+}
+@media (max-width: 1000px),
+(max-width: 440px) {
+    header h1 {
+        font-size: 24px; /* Ukuran font yang lebih kecil pada perangkat mobile */
+    }
+
+    .page {
+        width: 90%; /* Lebar halaman lebih besar pada perangkat mobile */
+        padding: 15px; /* Padding yang lebih kecil */
+    }
+
+    .page input[type="file"]{
+        width: 80%;
+    }
+    .page button,
+    #copyButton {
+       /* Tombol dan input file memenuhi lebar kontainer */
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+        padding: 12px; /* Padding tombol lebih besar untuk kemudahan sentuhan */
+    }
+    #urlResult {
+        font-size: 14px; /* Ukuran font lebih kecil */
+        padding: 8px; /* Padding lebih kecil */
+        margin: 10px auto; /* Margin otomatis untuk pusat */
+        width: 90%; /* Lebar 90% dari kontainer */
+    }
+    #preview {
+        max-width: 100%; /* Gambar preview memenuhi lebar kontainer */
+    }
+
+    .instructions {
+        padding: 15px; /* Padding lebih kecil untuk instruksi */
+    }
+
+    .footer {
+        padding: 16px; /* Padding footer lebih kecil */
+        font-size: 0.8em; /* Ukuran font footer lebih kecil */
+    }
+}
